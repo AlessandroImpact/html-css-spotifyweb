@@ -56,6 +56,10 @@ a:hover{
 
 /* FINE REGOLE GENERALI */
 
+
+
+
+
 /* REGOLE MAIN NAV */
 main{
     display: flex;
@@ -177,7 +181,10 @@ main{
 
 
 .content{
+    height: calc(100% - 100px);
+    background-color: #222326;
     width: calc(100% - 200px);
+    
 }
 
 
@@ -225,7 +232,7 @@ main{
 
 
 .container-played h2{
-    color: #000;
+    color: white;
     padding: 20px 0px;
     margin-left: 20px;
 }
@@ -252,7 +259,7 @@ main{
 }
 
 .played-element .cover-text h3{
-    color: #000;
+    color:  white;
     padding-top: 10px;
     line-height: 20px;
 }
@@ -261,4 +268,51 @@ main{
     color: #999;
     font-size: 12px;
     padding-top: 10px;
+}
+
+
+/* REGOLE MAIN CONTENT CONTAINER CREATE */
+.container-played h2{
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+}
+.container-played p {
+    color: #999;
+    font-size: 12px;
+    margin-top: 10px;
+    padding-bottom: 25px;
+    margin-left: 20px;
+  }
+/* REGOLE MAIN CONTENT CONTAINER ARTIST */
+.container-artist h2{
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+}
+.container-artist p {
+    color: #999;
+    font-size: 12px;
+    padding-bottom: 25px;
+    margin-left: 20px;
+  }
+  .container-artist .cover-circle img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+/*-----FOOTER----*/
+
+
+footer {
+    background-color: red;
+    height: 100px;
 }
