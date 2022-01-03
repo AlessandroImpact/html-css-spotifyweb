@@ -466,3 +466,104 @@ footer{
     padding-right: 10px;
     padding-left: 30px;
 }
+
+
+
+
+/* REGOLE FOOTER BOX CENTRALE */
+#container-footer .controller{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    flex-grow: 1;
+    padding: 0px 50px;
+}
+/* REGOLE BOX CENTRALE ELEMENTI / BOTTONI */
+#container-footer .controller .player-button ul li{
+    display: inline-block;
+    padding: 0px 10px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+#container-footer .controller .player-button ul li a{
+    display: inline-block;
+    color: #fff;
+}
+
+#container-footer .controller .player-button ul li a:hover{
+    color: #999;
+}
+/* BOTTONE PLAY */
+.big{
+    font-size: 35px;
+}
+/* INGRANDIMENTO BOTTONE PLAY CON HOVER */
+.big:hover{
+    transform: scale(1.2);
+}
+/* LINEA TEMPO */
+.player-time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-time .active-bar{
+    color: #999;
+    font-size: 12px;
+    padding-right: 20px;
+}
+
+.time-bar{
+    height: 4px;
+    border-radius: 4px;
+    background-color: #999;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.active-bar{
+    position: relative;
+    height: 100%;
+    width: 20%;
+    border: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.time-sx {
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.time-dx {
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+}
+/* LINEA TEMPO CON CAMBIO COLORE */
+.time-bar .bar-point{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: none;
+}
+/* ATTIVAZIONE LINEA TEMPO CON CAMBIO COLORE */
+.time-bar:hover .bar-point{
+    display: block;
+}
+
+.time-bar:hover .active-bar{
+    background-color: #94dd25;
+}
