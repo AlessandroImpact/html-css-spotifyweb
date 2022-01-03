@@ -21,12 +21,15 @@
         <main class="flex">
             <!------ CONTAINER GENERALE NAV ------->
             <nav class="main-nav flex">
-            <!-- contenitore logo spoty -->
+             <!-- CONTENITORE TOP DELLA NAV -->
+             <div class="top-nav">
                 <div class="logo-nav">
-            <!-- logo spoty grande -->
-                    <div class="logo-grande">
-                        <a href="#"><img src="img/logo.svg" alt="logo-grande"></a>
+            <!-- CONTENITORE MAIN NAV LOGHI -->
+                    <div class="logo">
+                        <a href="#" class="logo-grande"><img src="img/logo.svg" alt="logo-grande"></a>
+                        <a href="#" class="logo-piccolo"><img src="img/logo-small.svg" alt="logo-piccolo"></a>
                     </div>
+            
                 </div>
             <!------ CONTENITORE MENU ------>
             <div class="menu-nav">
@@ -67,6 +70,7 @@
                     <li><a href="#">Nome Playlist</a></li>
                 </ul>
             </div>
+        </div>
         <!-- CONTENITORE BOTTOM PLAYLIST SIDEBAR -->
             <div class="bottom-nav">
         <!-- CONTENITORE DOWNLOAD PLAYLIST -->
@@ -92,12 +96,12 @@
                 <!-- contenitore principale nav -->    
                     <nav class="main-content-nav">
                         <ul class="main-content-nav-list">
-                            <li><a href="#">IN EVIDENZA</a></li>
-                            <li><a href="#">PODCAST</a></li>
-                            <li><a href="#">CLASSIFICHE</a></li>
-                            <li><a href="#">GENERI E MOOD</a></li>
-                            <li><a href="#">NUOVE USCITE</a></li>
-                            <li><a href="#">SCOPRI</a></li>
+                            <li><a href="#" class="active-menu">IN EVIDENZA</a></li>
+                            <li><a href="#" class="line-menu">PODCAST</a></li>
+                            <li><a href="#" class="line-menu">CLASSIFICHE</a></li>
+                            <li><a href="#" class="line-menu">GENERI E MOOD</a></li>
+                            <li><a href="#" class="line-menu">NUOVE USCITE</a></li>
+                            <li><a href="#" class="line-menu">SCOPRI</a></li>
                         </ul>
                     </nav>
                 <!-- contenitore recently played --> 
@@ -109,6 +113,7 @@
                                 <!-- box img 1 elemento -->
                                 <div class="cover">
                                     <img src="img/metal_lifting.jpg" alt="">
+                                    <div class="layover"><i class="far fa-play-circle"></i></div>
                                 </div>
                                 <!-- box text 1 elemento -->
                                 <div class="cover-text">
@@ -123,6 +128,7 @@
                                 <!-- box img 2 elemento -->
                                 <div class="cover">
                                     <img src="img/stranger.jpeg" alt="">
+                                    <div class="layover"><i class="far fa-play-circle"></i></div>
                                 </div>
                                 <!-- box text 2 elemento -->
                                 <div class="cover-text">
@@ -137,6 +143,7 @@
                                 <!-- box img 3 elemento -->
                                 <div class="cover">
                                     <img src="img/aquietplace.jpeg" alt="">
+                                    <div class="layover"><i class="far fa-play-circle"></i></div>
                                 </div>
                                 <!-- box text 3 elemento -->
                                 <div class="cover-text">
@@ -151,6 +158,7 @@
                                 <!-- box img 4 elemento -->
                                 <div class="cover">
                                     <img src="img/split.jpeg" alt="">
+                                    <div class="layover"><i class="far fa-play-circle"></i></div>
                                 </div>
                                 <!-- box text 4 elemento -->
                                 <div class="cover-text">
@@ -165,6 +173,7 @@
                                 <!-- box img 5 elemento -->
                                 <div class="cover">
                                     <img src="img/cure.jpeg" alt="">
+                                    <div class="layover"><i class="far fa-play-circle"></i></div>
                                 </div>
                                 <!-- box text 5 elemento -->
                                 <div class="cover-text">
@@ -179,6 +188,7 @@
                                 <!-- box img 6 elemento -->
                                 <div class="cover">
                                     <img src="img/sinister.jpeg" alt="">
+                                    <div class="layover"><i class="far fa-play-circle"></i></div>
                                 </div>
                                 <!-- box text 6 elemento -->
                                 <div class="cover-text">
@@ -191,20 +201,21 @@
                     </div>
     
     
-                    <div class="create-for-container">
+                    <div class="container-create">
 
                         <h2>Creato per John Dhoe</h2>
                         <p>Più ascolti, più accurati saranno i suggerimenti</p>
 
-                        <div class="create-for-list flex">
+                        <div class="played-list flex">
 
                             <!--  1 elemento  -->
 
-                            <div class="create-for-item">
+                            <div class="played-element">
 
                                 <!-- box img 1 -->
                                 <div class="cover">
                                     <img src="img/radar.jpeg" alt="release radar">
+                                    <div class="layover"><i class="far fa-play-circle"></i></div>
                                 </div>
 
                                 <!-- box text 1 -->
@@ -219,11 +230,12 @@
 
                             <!--  2 elemento  -->
 
-                            <div class="create-for-item">
+                            <div class="played-element">
 
                                 <!-- box img 2 -->
                                     <div class="cover">
                                         <img src="img/mixdaily.jpeg" alt="release radar">
+                                        <div class="layover"><i class="far fa-play-circle"></i></div>
                                     </div>
     
                                     <!-- box text 2 -->
@@ -248,7 +260,7 @@
                         <h2>Artisti più popolari</h2>
                         <p>Più ascolti, più accurati saranno i suggerimenti</p>
 
-                        <div class="create-for-list flex">
+                        <div class="played-listt flex">
 
                             <!--  1 elemento  -->
 
@@ -257,6 +269,7 @@
                                 <!-- box img 1 -->
                                 <div class="cover-circle">
                                     <img src="img/youg.jpeg" alt="release radar">
+                                    <div class="layover"><i class="far fa-play-circle"></i></div>
                                 </div>
 
                                 <!-- box text 1 -->
@@ -276,6 +289,7 @@
                                 <!-- box img 2 -->
                                     <div class="cover-circle">
                                         <img src="img/einaudi.jpeg" alt="release radar">
+                                        <div class="layover"><i class="far fa-play-circle"></i></div>
                                     </div>
     
                                     <!-- box text 2 -->

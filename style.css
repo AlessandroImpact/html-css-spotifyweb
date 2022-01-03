@@ -53,6 +53,11 @@ a:hover{
     display: flex;
 }
 
+#container{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
 
 /* FINE REGOLE GENERALI */
 
@@ -63,21 +68,27 @@ a:hover{
 /* REGOLE MAIN NAV */
 main{
     display: flex;
-    height: 100%;
+    height: calc(100vh - 90px);
 }
 
 .main-nav{
-    width: 200px;
+    width: 250px;
     height: 100%;
     background-color: #000;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 400px;
 }
 
 .logo-nav{
     margin-bottom: 10px;
     padding: 20px;
+    z-index: 2;
+}
+
+.logo-nav .logo-piccolo{
+    display: none;
 }
 
 .main-nav .menu-nav img{
@@ -86,6 +97,20 @@ main{
     vertical-align: middle;
     color: #999;
 }
+
+
+/* REGOLE TOP E BOTTOM DELLA NAV */
+.top-nav{
+    height: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-nav{
+    height: 100px;
+}
+
+
 /* REGOLE MAIN NAV MENU */
 .main-nav .menu-nav a:hover img{
     color: #fff;
@@ -125,7 +150,7 @@ main{
 .container-playlist-nav a i{
     font-size: 30px;
     vertical-align: middle;
-    padding-right: 20px; 
+    padding-right: 10px; 
 }
 
 .playlist-nav ul li{
@@ -134,7 +159,6 @@ main{
 
 .playlist-nav{
     overflow-y: auto;
-    min-height: 50px;
     padding: 0px 10px;
 }
 
@@ -162,6 +186,12 @@ main{
     color: #999;
 }
 
+
+/* REGOLE MAIN NAV BOTTOM PROFILE */
+.main-nav .bottom-nav .profile-nav {
+    line-height: 50px;
+}
+
 .main-nav .bottom-nav .profile-nav img{
     height: 30px;
     vertical-align: middle;
@@ -181,9 +211,11 @@ main{
 
 
 .content{
-    height: calc(100% - 100px);
-    background-color: #222326;
     width: calc(100% - 200px);
+    height:100%; 
+    background-color: #141922;
+    overflow: auto;
+    padding-top: 100px;
     
 }
 
@@ -219,12 +251,32 @@ main{
 
 .main-content-nav ul li{
     font-size: 12px;
-    line-height: 50px;
+    padding: 20px 0px 5px 0px;
     margin: 0px 20px;
+    position: relative;
 }
 
-.main-content-nav-list{
-    margin-top: 100px;
+/* REGOLE MENU CONTENUTO CENTRALE LINEA VERDE SUL PRIMO ELEMENTO CON CLASSE ACTIVE-MENU */
+.main-content-nav .main-content-nav-list li a.active-menu::after{
+    content: "";
+    height: 2px;
+    width: 40px;
+    background-color: #94dd25;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* REGOLE MENU CONTENUTO CENTRALE LINEA VERDE CON HOVER SU ALTRI ELEMENTI MENU*/
+.main-content-nav .main-content-nav-list li a:hover::after{
+    content: "";
+    height: 2px;
+    width: 40px;
+    background-color: #94dd25;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
@@ -250,16 +302,49 @@ main{
 
 }
 
-.played-element .cover img{
+
+/* REGOLE RECENTLY PLAYED IMMAGINI CON LAYOVER */
+.played-element .cover,
+.played-element .cover-circle{
+    position: relative;
+}
+
+.played-element .cover img,
+.played-element .cover-circle img{
     width: 100%;
+}
+
+.played-element .cover .layover,
+.played-element .cover-circle .layover{
+    font-size: 70px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
 }
 
 .played-element:hover{
     cursor: pointer;
 }
 
+.played-element:hover .cover img,
+.played-element:hover .cover-circle img{
+    opacity: 0.5;
+}
+
+.played-element:hover .cover .layover,
+.played-element:hover .cover-circle .layover{
+    display: block;
+}
+
+
+/* REGOLE RECENTLY PLAYED TESTO */
+
+
 .played-element .cover-text h3{
-    color:  white;
+    color: #fff;
     padding-top: 10px;
     line-height: 20px;
 }
@@ -270,22 +355,37 @@ main{
     padding-top: 10px;
 }
 
+/*
+ REGOLE MAIN CONTENT CONTAINER CREATE */
+ .container-create{
+    display: flex;
+    flex-direction: column;
+}
 
-/* REGOLE MAIN CONTENT CONTAINER CREATE */
-.container-played h2{
+.container-create h2{
     color: #fff;
     padding-top: 20px;
     padding-bottom: 10px;
     margin-left: 20px;
 }
-.container-played p {
+
+.container-create p {
     color: #999;
     font-size: 12px;
     margin-top: 10px;
     padding-bottom: 25px;
     margin-left: 20px;
-  }
+}
+
+
 /* REGOLE MAIN CONTENT CONTAINER ARTIST */
+
+.container-artist{
+    display: flex;
+    flex-direction: column;
+}
+
+
 .container-artist h2{
     color: #fff;
     padding-top: 20px;
@@ -315,4 +415,5 @@ main{
 footer {
     background-color: red;
     height: 100px;
+   
 }
