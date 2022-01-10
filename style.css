@@ -567,3 +567,373 @@ footer{
 .time-bar:hover .active-bar{
     background-color: #94dd25;
 }
+
+
+
+/* REGOLE FOOTER BOX DESTRA AUDIO */
+#container-footer .audio{
+    width: 20%;
+    padding: 10px;
+}
+/* BOX DESTRA AUDIO ELEMENTI */
+#container-footer .audio .audio-list{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#container-footer .audio .audio-volume{
+    justify-content: center;
+    align-items: center;
+}
+
+#container-footer .audio .audio-volume a{
+   padding-right: 10px;
+}
+
+.audio-item{
+    padding-right: 20px;
+}
+
+.audio-item a, .audio-volume a{
+    color: #fff;
+}
+
+.audio-item a:hover, .audio-volume a:hover{
+    color: #999;
+}
+/* BOX DESTRA AUDIO LINEA VOLUME */
+.audio-bar{
+    height: 40px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #999;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.audio-bar .active-bar{
+    position: relative;
+    height: 100%;
+    width: 20%;
+    border: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+/* BOX DESTRA AUDIO LINEA VERDE VOLUME */
+.audio-bar .bar-point{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: none;
+}
+/* ATTIVAZIONE BOX DESTRA AUDIO LINEA VERDE VOLUME */
+.audio-bar:hover .bar-point{
+    display: block;
+}
+
+.audio-bar:hover .active-bar{
+    background-color: #94dd25;
+}
+
+
+
+
+/* MEDIA QUERY MINORE DI 600PX */
+@media (min-width: 310px) and (max-width: 600px){
+    /* MEDIA QUERY PER MODIFICARE CONTENITORE NAV DX */
+    nav.main-nav{
+        width: 50px;
+    }
+
+    .main-nav{
+        width: calc(100% - 50px);
+        padding: 10px;
+    }
+     /* MEDIA QUERY PER MODIFICARE MENU NAV DX */
+    .menu-nav ul li{
+        padding: 5px 0px;
+    }
+
+    .menu-nav ul li.here{
+        border-left: 0px;
+        padding-left: 0px;
+    }   
+
+    .main-nav .menu-nav{
+        flex-grow: 1;
+    }
+    /* MEDIA QUERY PER MODIFICARE VISIBILITA' LOGO GRANDE E PICCOLO */
+    .logo-nav{
+        padding: 0px;
+    }
+
+    .logo-nav .logo .logo-piccolo{
+        display: block;
+    }
+
+    .logo-nav .logo .logo-grande{
+       display: none;
+   } 
+    /* MEDIA QUERY PER NASCONDERE PLAYLIST NELLA VERSIONE MOBILE */
+    .main-nav .container-playlist-nav,
+    .main-nav .playlist-nav{
+        display: none;
+    }
+
+    .main-nav .menu-text{
+        display: none;
+    }
+    /* MEDIA QUERY PER MODIFICARE SPAZITURA SEZIONE UPGRATE */
+    .container-upgrate{
+        width: calc(100% - 50px);
+    }
+    /* MEDIA QUERY PER CREARE SPAZIATURE NELLA BOTTOM NAV */
+    .main-nav .bottom-nav{
+        padding: 0px;
+    }
+   
+    .download-nav a img{
+        padding-left: 4px;
+    }
+
+    .main-nav .bottom-nav .download-nav{
+        border-bottom: none;
+    }
+    /* MEDIA QUERY PER MODIFICARE CONTENITORE MAIN PRINCIPALE */
+     .content{
+        width: 100%;
+    }
+
+    .main-content-nav{
+        width: calc(100% - 50px);
+    }
+    /* MEDIA QUERY PER ALLINEARE MENU PRINCIPALE AL CENTRO */
+    .main-content-nav ul li{
+        margin: 0px 10px;
+    }
+    /* MEDIA QUERY PER ALLINEARE ELEMENTI AL CENTRO */
+    .played-list{
+        margin: 0px 10px;
+    }
+    
+    .played-element{
+        margin: 0px 10px;
+    }
+    /* MEDIA QUERY ELEMENTI AL CENTRO + RIDIMENSIONAMENTO TESTO COVER */
+    .cover-text h3{
+        font-size: 12px;
+    }
+
+    /* MEDIA QUERY PER MODIFICARE CONTENIORE FOOTER */
+    /* MEDIA QUERY PER MODIFICARE CONTENIORE FOOTER RIDIMENSIONAMENTO 3 SPAZI */
+    #container-footer .song{
+        flex-grow: 1;
+    }
+
+    #container-footer .controller{
+        flex-grow: 2;
+    }
+
+    #container-footer .audio{
+        flex-grow: 1;
+    }
+    /* MEDIA QUERY PER MODIFICARE COL SX DIMENSIONI */
+    #container-footer .song .song-cover img{
+        height: 80%;
+    }
+
+    #container-footer .song{
+        width: 25%;
+    }
+
+    #container-footer .song .song-cover{
+        height: 80%;
+    }
+    
+    #container-footer .song .song-cover img{
+        height: 80%;
+        margin-right: 5px;
+        margin-left: 10px;
+    }
+
+    #container-footer .song .song-name h3{
+        font-size: 10px;
+        margin-right: 5px;
+    }
+    
+    #container-footer .song .song-name p{
+        font-size: 9px;
+        margin-right: 5px;
+    }
+    
+    .song-save{
+        flex-direction: column;
+        align-items: center;
+        padding-left: 5px;
+        font-size: 13px;
+    }
+    
+    #container-footer .song .song-save .first{
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-bottom: 5px;
+    }
+
+    /* MEDIA QUERY PER MODIFICARE COL CENTRALE DIMENSIONI */
+    #container-footer .controller{
+        width: 25%;
+        padding: 0px 2px;
+    }
+
+    #container-footer .controller .player-button ul li{
+        font-size: 15px;
+        padding: 0px 2px;
+        margin-bottom: 5px;
+    }
+
+    .big{
+        font-size: 25px;
+    }  
+
+     /* MEDIA QUERY PER MODIFICARE COL DX DIMENSIONI */
+    #container-footer .audio{
+        width: 25%;
+    }
+} 
+/* FINE RESPONSIVE CON MEDIA QUERY AL DI SOTTO DEI 600PX */
+
+
+
+/* MEDIA QUERY IMPOSTATE A DIVERSE GRANDEZZE PER POSIZIONARE ELEMENTI AL CENTRO */
+@media (max-width: 1170px){
+    .played-element{
+        flex-basis: calc(100% / 5 - 20px);
+        margin: 0px 10px;
+    }
+}
+
+@media (max-width: 1060px){
+    .played-element{
+        flex-basis: calc(100% / 4 - 20px);
+        margin: 0px 10px;
+    }
+}
+
+@media (max-width: 826px){
+    .played-element{
+        flex-basis: calc(100% / 3 - 20px);
+        margin: 0px 10px;
+    }
+}
+
+@media (max-width: 684px){
+    .played-element{
+        flex-basis: calc(100% / 2 - 20px);
+        margin: 0px 10px;
+    }
+}
+
+@media (max-width: 343px){
+    .played-element{
+        flex-basis: calc(100% - 20px);
+        margin: 0px 10px;
+    }
+}
+/* FINE MEDIA QUERY IMPOSTATE A DIVERSE GRANDEZZE PER POSIZIONARE ELEMENTI AL CENTRO */
+
+
+
+/* RESPONSIVE CON MEDIA QUERY MINORE DI 768PX */
+@media (min-width: 600px) and (max-width:768px){
+
+    /* MEDIA QUERY ELEMENTI AL CENTRO + RIDIMENSIONAMENTO TESTO COVER */
+    .cover-text h3{
+        font-size: 13px;
+    }
+
+    /* MEDIA QUERY PER MODIFICARE CONTENIORE FOOTER */
+    /* MEDIA QUERY PER MODIFICARE CONTENIORE FOOTER RIDIMENSIONAMENTO 3 SPAZI */
+    #container-footer .song{
+        flex-grow: 1;
+    }
+
+    #container-footer .controller{
+        flex-grow: 2;
+    }
+
+    #container-footer .audio{
+        flex-grow: 1;
+    }
+    /* MEDIA QUERY PER MODIFICARE COL SX DIMENSIONI */
+    #container-footer .song .song-cover img{
+        height: 80%;
+
+    }
+
+    #container-footer .song{
+        width: 25%;
+    }
+
+    #container-footer .song .song-cover{
+        height: 80%;
+    }
+    
+    #container-footer .song .song-cover img{
+        height: 80%;
+        margin-right: 5px;
+        margin-left: 10px;
+    }
+
+    #container-footer .song .song-name h3{
+        font-size: 10px;
+        margin-right: 5px;
+    }
+    
+    #container-footer .song .song-name p{
+        font-size: 9px;
+        margin-right: 5px;
+    }
+    
+    .song-save{
+        flex-direction: column;
+        align-items: center;
+        padding-left: 5px;
+        font-size: 13px;
+    }
+    
+    #container-footer .song .song-save .first{
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-bottom: 5px;
+    }
+
+    /* MEDIA QUERY PER MODIFICARE COL CENTRALE DIMENSIONI */
+    #container-footer .controller{
+        width: 25%;
+        padding: 0px 5px;
+    }
+
+    #container-footer .controller .player-button ul li{
+        font-size: 20px;
+        padding: 0px 5px;
+        margin-bottom: 10px;
+    }
+
+    .big{
+        font-size: 30px;
+    }  
+
+     /* MEDIA QUERY PER MODIFICARE COL DX DIMENSIONI */
+    #container-footer .audio{
+        width: 25%;
+    }
+}
+/* FINE RESPONSIVE CON MEDIA QUERY AL DI SOTTO DEI 768PX */
